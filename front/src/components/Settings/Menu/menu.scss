@@ -1,0 +1,48 @@
+@use 'src/styles/vars';
+
+.dashboard {
+
+  &__menu { //dashboard__menu
+    font-size: 1em;
+    width: 100%;
+    padding: 1.8em 2em;
+    
+    &-list { //dashboard__menu-list
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &-item { //dashboard__menu-item
+      display: flex;
+      align-items: center;
+      height: 35px;
+      margin: 0;
+      padding: 1em;
+      transition: 0.5s ease all;
+      color: white;
+      border-radius: vars.$full-radius;
+      background-color: vars.$primary-color;
+      
+      @media screen and (max-width: 900px) {
+        font-size: 0.9em;
+      }
+      &:not(:last-of-type) { //dashboard__menu-item:not(:last-of-type)
+        margin-right: 1em;
+      }
+
+      &:hover { //dashboard__menu-item dashboard__menu-item:hover
+        cursor: pointer;
+        transition: 0.5s ease all;
+        color: white;
+        background-color: vars.$secondary-color;
+        border-radius: 3em;
+      }
+
+      &-active { //dashboard__menu-item dashboard__menu-item-active
+        color: white;;
+        border-radius: 3em;
+        background-color: vars.$secondary-color;
+      }
+    }
+  }
+}

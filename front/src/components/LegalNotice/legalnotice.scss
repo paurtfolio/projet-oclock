@@ -1,0 +1,121 @@
+@use 'src/styles/vars';
+ 
+.legalnotice {
+  // margin: auto;
+  // text-align: center;
+  // top: 5em;
+  // position: relative;
+
+  width: 80%;
+  margin: auto;
+  text-align: justify;
+  margin-top: 8em;
+  padding-bottom: 3em;
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 0.3em;
+  }
+ 
+  h2 {
+    color: vars.$primary-color;
+    margin-bottom: 2em;
+  }
+
+  h3 {
+    color: vars.$primary-color;
+    margin-bottom: -0.5em;
+  }
+ 
+  // &-img {
+  //   width: 27em;
+  //   padding: 1em;
+  //   margin-bottom: 3em;
+
+  //   @media screen and (max-width:900px) {
+  //     width: 20em;
+  //    }
+  }
+
+//   &-content {
+//     display: flex;
+//     justify-content: space-evenly;
+//     align-items: center;
+//     flex-wrap: wrap;
+//     margin-top: 1em;
+//     width: 100vw;
+//   }
+
+//   &-team {
+//     width: 39vw;
+//     flex-direction: row;
+//     display: flex;
+//     flex-wrap: wrap;
+//   }
+
+//   &-infos {
+//     width: 47vw;
+//     text-align: left;    
+//     border-radius: vars.$light-radius;
+//     box-shadow: vars.$box-shadow;
+//     background-color: white;
+//     padding: 2em 2em 2em 4em;
+//     height: 36em;
+//   }
+
+//     @media screen and (max-width:1500px) {
+//      width: 100vw;
+//     }
+//     @media screen and (max-width:1200px) {
+//       width: 100vw;
+//     }
+//      @media screen and (max-width:900px) {
+//       flex-direction: column; 
+//       margin-bottom: 8em;
+//      }
+// }
+
+// .team-card {
+//   height: 17em;
+//   width: 20em;
+//   padding: 2em;
+//   overflow: hidden;
+//   border: none;
+//   border-radius: vars.$light-radius;
+//   box-shadow: vars.$box-shadow;
+//   margin: 1em;
+//   background-color: #fff;
+// }
+
+// .team-img {
+//   height: 10em;
+// }
+
+// .team-name {
+//   color: vars.$primary-color;
+//   font-size: 1.2em;
+// }
+
+// .team-title {
+//   font-weight: lighter;
+// }
+
+// .team-contact {
+//   color: gray;
+// }
+
+// .legalnotice-logo {
+//   height: 8em;
+// }
+
+// .legalnotice-infos-title {
+//   color: vars.$primary-color;
+//   font-size: 1.5em;
+//   margin: 0.5em;
+// }
+
+// .legalnotice-infos-desc {
+//   color: vars.$secondary-color;
+//   font-size: 1em;
+//   margin: .5em 1em;
+// }

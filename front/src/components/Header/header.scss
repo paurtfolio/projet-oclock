@@ -1,0 +1,190 @@
+@use 'src/styles/vars';
+ 
+  .header { // header englobe logo + compo navigation (en desktop uniquement) + logos login + signup | logout
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 4em;
+    padding-right: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom: 2px solid vars.$primary-color;
+    z-index: 1;
+  }
+
+  .logo {
+    width: 10em;
+    padding: 1em;
+
+    @media (min-width:700px) and (max-width:1200px) {
+      width: 9em;
+      margin: 1em;
+      padding: 0;
+    }
+    @media (max-width: 700px) {
+        margin: 0em 0 0em -1em;
+        padding: 1.5em;
+    }
+}
+
+svg path .st1 {
+  fill: white;
+}
+
+svg path .st1:hover {
+  fill: blue;
+}
+
+  .navigation--desktop {
+    display: block;
+  }
+
+  .navigation--mobile {
+    display: none;
+  }
+  
+  .bloc-right { // bloc à droite (login + signup | logout)
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bloc-left { // bloc à gauche (logo)
+    float: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .login {
+    margin: 0 1.2em 0 0;
+    
+    &-link { // lien pour se loguer
+      text-align: right;
+    }
+
+    &-img { // logo pour se loguer
+      display: none;
+      @media screen and (max-width:900px) {
+        display: block;
+        width: 2.5em;
+        margin: auto 2em;
+      }
+    }
+
+    &-p {
+      padding: 1em;
+      font-size: 1.2em;
+      color: #3d5499;
+   
+      &:hover {
+        color:vars.$secondary-color;
+      }
+
+      @media screen and (max-width:1020px) {
+        font-size: 1em;
+      }
+      @media screen and (min-width:1020px) and (max-width:1070px) {
+        font-size: 1em;
+      }
+      @media screen and (min-width:900px) and (max-width:990px) {
+        font-size: 0.89em;
+      }
+    }
+  }
+
+  .signup {
+    margin: 0 1.2em 0 0;
+    
+    &-link { // lien pour s'inscrire
+      text-align: right;
+    }
+
+    &-img { // logo pour s'inscrire
+      display: none;
+      @media screen and (max-width:900px) {
+        display: block;
+        width: 2.5em;
+        margin: auto 2em;
+      }
+    }
+
+    &-p {
+      padding: 1em;
+      font-size: 1.2em;
+      color: #3d5499;
+
+      &:hover {
+        color:vars.$secondary-color;
+      }
+
+      @media screen and (max-width:1020px) {
+        font-size: 1em;
+      }
+      @media screen and (min-width:1020px) and (max-width:1070px) {
+        font-size: 1em;
+      }
+      @media screen and (min-width:900px) and (max-width:990px) {
+        font-size: 0.89em;
+      }
+    }
+  }
+
+  .logout {
+    margin: 0 1.2em 0 0;
+    
+    &-link { // lien pour se deloguer
+      text-align: right;
+    }
+
+    &-img { // logo pour se deloguer
+      display: none;
+      @media screen and (max-width:900px) {
+        display: block;
+        width: 2.5em;
+        margin: auto 2em;
+      }
+    }
+
+    &-p {
+      padding: 1em;
+      font-size: 1.2em;
+      color: #3d5499;
+      
+      &:hover {
+        color:vars.$secondary-color;
+      }
+
+      @media screen and (max-width:1020px) {
+        font-size: 1em;
+      }
+      @media screen and (min-width:1020px) and (max-width:1070px) {
+        font-size: 1em;
+      }
+      @media screen and (min-width:900px) and (max-width:990px) {
+        font-size: 0.89em;
+      }
+    }
+  }
+
+@media (max-width:900px){ // mobile
+
+  .navigation--desktop {
+    display: none;
+  }
+
+  .navigation--mobile {
+    display: block;
+  } 
+}
+
+.navigation-link--active p {
+  color: vars.$secondary-color;
+}

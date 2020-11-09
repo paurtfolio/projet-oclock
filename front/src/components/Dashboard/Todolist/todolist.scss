@@ -1,0 +1,140 @@
+@use 'src/styles/vars';
+
+.favs-todo {
+  height: auto; 
+  // height: 42vh; 
+  display: flex;
+  border-radius: 20px 20px 0 0;
+
+  @media screen and (max-width: 1200px) {
+    margin-bottom: 2em;
+  }
+  
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 0em;
+  }
+}
+
+.favs,
+.todolist {
+  flex: 1;
+  padding: 2em;
+  border-radius: 2em;
+  box-shadow: vars.$box-shadow;
+  background-color: white;
+  height: 21em;
+}
+
+.todolist {
+  flex: 1;
+  max-height: 365px;
+
+  @media screen and (max-width: 900px) {
+    margin-right: 0;
+    margin-bottom: 4em;
+    height: max-content;
+  }
+
+  &__header {
+    display: flex;
+  }
+
+  &__item {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 2em;
+    background-color: vars.$background-color;
+    border-radius: 1em;
+    margin-right: 1em;
+
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+
+    & span {
+      flex: 8;
+      padding: 1em;
+      @media screen and (max-width:900px) {
+        font-size: 0.65em;
+      }
+    }
+  }
+
+  &__checkbox {
+    color: #3d5499;
+    width: 2em;
+    height: 1em;
+  }
+
+  &__modalplus-img {
+    position: relative;
+    width: 1.5em;
+    top: -0.5em;
+    right: -1em;
+  }
+
+  &__modaltrash-img {
+    position: relative;
+    width: 1em;
+    right: 1em;
+ }
+}
+
+h2 {
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.form__input {  
+  width: 100%;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 2em;
+  border: none;
+  padding: 1em;
+  margin-left: -1em;
+  margin-top: 0.25em;
+
+  &::placeholder {
+    color: vars.$primary-color;
+  }
+}
+
+.todo-content {
+  overflow-y: scroll;
+  // height: 18em;
+  height: 17em;
+}
+
+.todo-content::-webkit-scrollbar {
+  width: 12px;
+}
+
+.todo-content::-webkit-scrollbar-track {
+  background-color: vars.$background-color;
+  border: none;
+}
+
+.todo-content::-webkit-scrollbar-thumb {
+  background-color: vars.$primary-color;
+  border: none;
+  border-radius: 5em;
+}
+
+.todo-content::-webkit-scrollbar-button {
+  background-color: transparent;
+  border: none;
+  border-radius: 5em;
+} 
+
+.todo-content::-webkit-scrollbar-corner {
+  background-color: vars.$primary-color;
+  border-radius: 5em;
+}

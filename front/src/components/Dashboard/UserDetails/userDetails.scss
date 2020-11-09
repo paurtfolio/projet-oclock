@@ -1,0 +1,143 @@
+@use 'src/styles/vars';
+
+.user-details {
+  text-align: center;
+  flex: 2;
+
+  &__picture {
+    width: 8em;
+    border-radius: vars.$full-radius;
+    box-shadow: vars.$box-shadow;
+    margin: 2em;
+
+    @media screen and (max-width:1300px) {
+      margin: 1em 2em;
+    }
+  }
+
+  &__infos {
+    align-items: center;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+
+    @media screen and (max-width:1600px) {
+      margin: auto;
+    }
+  }
+  
+  & &__tag {
+    font-size: 0.9em;
+    margin: 0.3em;
+    padding: 0.5em 0.7em;
+    color: white;
+    border-radius: 5px;
+    background-color:#adacac;
+
+    @media screen and (max-width:900px) {
+        font-size: 0.79em;
+        margin: .25em .25em;
+        padding: .5em .7em;
+        color: #fff;
+        border-radius: 5px;
+        width: 6em;
+    }
+  }
+}
+
+.user-stats {
+  text-align: center;
+  flex: 2;
+  margin: 2em;
+
+  @media screen and (max-width:1600px) {
+      display: flex;
+      flex: 5;
+      flex-direction: row;
+      align-items: flex-start;
+  }
+
+  @media screen and (max-width:900px) {
+    text-align: center;
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex-direction: column;
+    font-size: 0.8em;
+}
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    & label {
+      font-size: 12px;
+      flex: 1;
+    }
+
+    & & label, & progress {
+      margin-right: 5px;
+    }
+
+    & progress {
+      flex: 3;
+    }
+
+    & span {
+      font-size: 1em;
+      margin-top: 0.6em;
+      -webkit-box-flex: 2;
+      flex: 5;
+
+      @media screen and (max-width: 1300px) {
+          font-size: 0.9em;
+          margin-bottom: 1.5em;
+      }
+    }
+  }
+
+  &__advices {
+    font-size: 0.9em;
+    text-align: left;
+    margin-bottom: 0.5em;
+  }
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 0.8em;
+
+  &::-webkit-progress-bar {
+    align-self: stretch;
+    border: 1px solid vars.$background-color;
+    border-radius: 1em;
+    background-color: vars.$background-color;
+  }
+
+  &::-webkit-progress-value {
+    position: relative;
+    border-radius: 1em;
+  }
+}
+
+.progress-food[value]::-webkit-progress-value {
+  background-color: vars.$food-color;
+}
+.progress-sport[value]::-webkit-progress-value {
+  background-color: vars.$sport-color;
+}
+.progress-sleep[value]::-webkit-progress-value {
+  background-color: vars.$sleep-color;
+}
+.progress-water[value]::-webkit-progress-value {
+  background-color: vars.$water-color;
+}
+.progress-weight[value]::-webkit-progress-value {
+  background-color: vars.$weight-color;
+}

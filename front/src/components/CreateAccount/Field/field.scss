@@ -1,0 +1,10 @@
+@use 'src/styles/vars';
+
+.create-input {
+  padding: vars.$input-padding;
+  border: vars.$input-border;
+  border-radius:vars.$input-radius;
+  width: 100%;
+  font-size:vars.$input-fontsize;
+  margin:vars.$input-margin;
+}

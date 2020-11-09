@@ -1,0 +1,222 @@
+@use 'src/styles/vars';
+
+.home {
+  margin-top: 4em;
+  display: flex;
+  flex-direction: column;
+  
+  &-bloc-top {
+    position: absolute;
+    background-color: vars.$background-color;  
+    height: 64em;
+    padding: 0 5vw;
+    width: 100vw;
+
+    @media screen and (max-width:900px) {
+      position: absolute;
+      height: 104em;
+      }
+
+    &-img {
+      position: absolute;
+      right: 5%;
+      top: 14em;
+      height: 41em;
+      
+      @media screen and (max-width:1660px) {
+        right: 2%;
+        top: 14em;
+        height: 36em;
+      }
+      @media screen and (max-width:1500px) {
+        display: none;
+      }
+    }
+  }
+
+  &-title {
+  &-pc {
+    font-size: 6em;
+    color: vars.$primary-color;
+    font-weight: bold;
+
+    @media screen and (max-width:1300px) {
+      font-size: 4.5em;
+    }
+    @media screen and (max-width:900px) {
+      font-size: 3em;
+    }
+  }
+    &-sc {
+    font-size: 6em;
+    color: vars.$secondary-color;
+    font-weight: bold;
+
+    @media screen and (max-width:1300px) {
+      font-size: 4.5em;
+    }
+    @media screen and (max-width:900px) {
+      font-size: 3em;
+    }
+  }
+
+    &-white {
+      font-size: 4em;
+      color: white;
+      font-weight: bold;
+      margin: 0 0 .5em 0;
+
+      @media screen and (max-width:1500px) {
+        margin: 1em 0 .5em;
+        font-size: 3em;
+      }
+
+      @media screen and (max-width:900px) {
+        font-size: 2.8em;
+        margin: 1.68em 0 1em 0;
+        padding: 0 0.5em;
+      }
+    }
+  }
+
+  &-subtitle-pc {
+    font-size: 2em;
+    margin-top: 1.5em;
+    color: vars.$primary-color;
+    font-weight: lighter;
+
+    @media screen and (max-width:900px) {
+      font-size: 1.5em;
+      padding: 0 1.4em;
+    }
+  }
+  
+  &-bloc-bottom {
+    position: absolute;
+    margin-top: 125vh;
+    height: 60em;
+    width: 100vw;
+    background-color: #bce3f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 0 10vw;
+    height: 64em;
+
+    @media screen and (max-width:1500px) {
+      height: 55em;
+      margin-top: 57em;
+    }
+
+    @media screen and (max-width:900px) {
+      padding: 0 4vw;
+      height: auto;
+      top: 53em;
+      margin-top: 2.7em;
+    }
+
+    &-img {
+      position: absolute;
+      left: 10em;
+      top: -20.1em;
+      height: 22em;
+
+      @media screen and (max-width:900px) {
+        position: absolute;
+        left: 3em;
+        height: 14em;
+        top: -12.82em;
+      }
+    }
+  }
+
+  &-bloc-title {
+      width: 64em;
+      margin-top: 5em;
+
+      @media screen and (max-width:900px) {
+        width: 100%;
+        margin-top: 2em;
+        padding: 0 1.5em;
+      }
+      @media screen and (max-width:540px) {
+        font-size: 0.8em;
+      }
+  }
+}
+
+.home-paragraphs {
+  line-height: 1.2em;
+  font-size: 1.6em;
+  margin-top: 2em;
+  width: 29em;
+
+  @media screen and (max-width:1500px) {
+    width: 100%;
+  }
+  
+
+  @media screen and (max-width:900px) {
+    line-height: 1em;
+    font-size: 1.6em;
+    margin-top: 2em;
+    padding: 0 1em;
+  }
+ }
+
+.home-paragraph {
+    font-size: 1em;
+    color:vars.$primary-color;
+    text-align: justify;
+    margin-bottom: 1em;
+
+    @media screen and (max-width:900px) {
+      font-size: 0.8em;
+    }
+}
+
+.signup-home-button {
+  position: relative;
+  border: none;
+  border-radius: 5em;
+  background-color: #3d5499;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  width: auto;
+  height: 2.5em;
+  padding: 0.7em 0.99em;
+  margin: 1em;
+  
+  &:hover {
+    cursor: pointer;
+    background-color: vars.$secondary-color;
+    transition: all .3s ease;
+  }
+
+  @media screen and (max-width:1300px) {
+    margin: 1em 1em 5em 1em; 
+  }
+}
+
+.home-bloc-bottom-img--test-d {
+  width: 78vw;
+  box-shadow: vars.$box-shadow;
+  border-radius: vars.$light-radius;
+
+  @media screen and (max-width:900px) {
+    display: none;
+  }
+}
+
+.home-bloc-bottom-img--test-m {
+  display: none;
+
+  @media screen and (max-width:900px) {
+    display: block;
+    width: 25em;
+    margin: auto;
+  }
+}

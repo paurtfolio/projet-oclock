@@ -1,0 +1,162 @@
+@use 'src/styles/vars';
+
+.logo-food {
+  width: 75px;
+  margin: auto;
+  float: left;
+  padding-left: 1em;
+  padding-top: 1em;
+
+  @media (max-width: 900px) {
+    width: 5em;
+  }
+}
+
+.modal-food {
+  background-color: white;
+  width: 36em;
+  height: 27em;
+  box-shadow: vars.$box-shadow;
+  padding: .6em;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 1em; 
+  border-radius: 2em;
+  border-top: 2em solid vars.$food-color;
+ 
+  @media (max-width: 900px) {
+    width: 26em;
+    margin-left: 0em;
+    height: auto;
+    position: absolute;
+    top: 0em;
+  }  
+}
+
+.modal-button-food {
+  background-color: #3d5499;
+  color: #fff;
+  padding: 0.89em;
+  border: none;
+  border-radius: 2em;
+  margin: .5em;
+  width: 5em;
+  height: 1.5em;
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  font-size: 1.65em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  &:hover {
+    cursor: pointer;
+    background-color: vars.$secondary-color;
+    transition: all .3s ease;
+  }
+
+  @media (max-width: 900px) {
+    width: 4em;
+    font-size: 1.5em;
+  }
+}
+
+.mod-label-food {
+  margin: 0.5em 0;
+  font-size: 1em;
+  font-weight: 300;
+  color: #808080;
+  font-weight: bold;
+}
+
+.mod-input-food {
+  padding: -0.54em;
+  border: 2px solid vars.$secondary-color;
+  width: 33%;
+  font-size: 1em;
+  margin: 0.3em 0;
+  border-radius: 5em;
+
+  @media (max-width: 900px) {
+    width: 38%;
+  }
+}
+
+.mod-title-food {
+  padding-left: 2em;
+  color: #3D5499;
+  margin-top: 1em;
+  margin-left: 1em;
+  font-size: 2em;
+
+  @media (max-width: 900px) {
+    width: 85%;
+  }
+}
+
+.mod-form-food {
+  margin: 1em;
+  padding-left: 5em;
+
+  @media (max-width: 900px) {
+    width: 20em;
+    margin: 2em auto;
+    padding-left: 2em;
+  }
+}
+
+.button-cal {
+  width: 3em;
+  -webkit-box-orient: horizontal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: .3em;
+  border-radius: 1em;
+  color: white;
+  border: none;
+  background-color: #3d5499;
+}
+
+.mod-meal {
+  display: flex;
+  flex-direction: column;
+}
+
+.bloc-right-food {
+  width: 100%;
+  margin-top: -6.5em;
+  margin-left: 13em;
+  padding-top: .9em;
+  
+  @media (max-width: 900px) {
+    width: 20em;
+  margin-left: 10em;
+  }
+}
+
+.mod-cal-food {
+  padding-left: 6em;
+  font-size: 1em;
+  margin-top: 2em;
+
+  @media (max-width: 900px) {
+    width: 20em;
+    margin: 2em auto;
+    padding-left: 2em;
+  }
+}
+
+.mod-para2 {
+  color: #3D5499;
+  font-weight: bold;
+  padding-top: .5em;
+}
+
+// .trackers-modal {
+//   position: absolute;
+//   width: 100%;
+//   background: transparent;
+//   margin: 0 auto;
+// } 

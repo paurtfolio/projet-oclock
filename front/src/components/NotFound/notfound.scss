@@ -1,0 +1,32 @@
+@use 'src/styles/vars';
+
+.notfound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4em;
+  background-color: #f2f4fb;
+  height: 90vh;
+
+  @media screen and (max-width:900px) {
+    margin: 4em auto;
+    height: 84vh;
+  }
+}
+
+.desktop {
+  width: 60%;
+
+  @media screen and (max-width:900px) {
+  display: none;
+  }
+}
+
+.mobile {
+  display: none;
+
+  @media screen and (max-width:900px) {
+    display: block;
+    width: 60%;
+  }
+}

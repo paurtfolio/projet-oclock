@@ -1,0 +1,148 @@
+@use 'src/styles/vars';
+
+.logo-category {
+  width: 24em;
+  // padding: .6em;
+  margin: 25px;
+  position: relative;
+  overflow: hidden;
+  // padding-bottom: 1em; 
+  border-radius: 1em;
+  @media (max-width: 1350px) {
+    width: 22em;
+  }
+  @media (max-width: 850px) {
+    width: 30em;
+  }
+}
+
+.article__img {
+  width: 100%;
+  height: 17em;
+  object-fit: cover;
+  border-radius: 1em 1em 0 0;
+}
+
+.fav {
+  width: 3em;
+  position: relative;
+  float: right;
+  padding: .5em;
+  margin-top: 0.4em;
+  margin-right: 0.4em;
+}
+
+.favs__overview-one {
+  width: 100%;
+}
+
+.favs__overview-one svg {
+  font-size: 1.5em;
+  position: absolute;
+  top: .5em;
+  left: .5em;
+  cursor: pointer;
+  color: vars.$background-color;
+}
+
+.favs__overview-one svg :hover{
+  color: vars.$hover-fav;
+}
+
+.favs__overview-selected svg {
+  color: vars.$hover-fav;
+}
+
+.articles {
+  text-align: center;
+  margin: 6em auto auto auto;
+  width: 90%;
+}
+
+.article {
+  background-color: #fff;
+  border: none;
+  -webkit-box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
+  box-shadow: 0 7px 29px 0 rgba(100,100,111,.2);
+  margin: 25px;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 1em;
+  border-radius: 1em;
+  width: 24em;
+  max-width: 24em;
+  min-width: 24em;
+
+  @media (max-width: 1350px) {
+    // width: 22em;
+  }
+  @media (max-width: 850px) {
+    width: 30em;
+  }
+}
+
+.articles__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 90em;
+  margin: auto;
+}
+
+.article__seemore {
+  background-color: vars.$primary-color;
+  color: #fff;
+  padding: .4em 0.8em;
+  border-radius: 5em;
+  position: relative;
+  float: right;
+  margin: 1em 1em 0 0;
+  &:hover {
+    cursor: pointer;
+    background-color: vars.$secondary-color;
+    transition: all .3s ease;
+  }
+}
+
+.more__articles {
+  position: relative;
+  background-color: vars.$secondary-color;
+  color: white;
+  border-radius: 5em;
+  padding: 0.5em 1.2em;
+  margin-bottom: 2em;
+  display: inline-block;
+  &:hover {
+    cursor: pointer;
+    background-color: vars.$primary-color;
+    transition: all .3s ease;
+  }
+
+  @media (max-width: 900px) {
+    margin-bottom: 5em;
+  }
+}
+
+.article__title {
+  padding-bottom: 1em;
+  padding-top: 1em;
+  margin: 0 .9em;
+  font-weight: 600;
+  font-size: .92em;
+  text-align: left;
+  height: 4em;
+  color: vars.$primary-color;
+}
+
+.article__excerpt {
+  text-align: justify;
+  font-size: 1em;
+  padding: 0 1em;
+  height: auto;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

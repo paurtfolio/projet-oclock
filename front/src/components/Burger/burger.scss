@@ -1,0 +1,67 @@
+@use 'src/styles/vars';
+
+.modal-burger {
+  position: fixed;
+  bottom: 4em;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.modal-burger-content {
+  background-color: #fff;
+  height: 16em;
+  padding: 0.6em;
+  border-top: 2px solid vars.$secondary-color;
+  border-bottom: 2px solid vars.$primary-color;
+}
+
+.navigation-list-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 15px;
+  text-align: left;
+}
+
+.navigation-link-mobile {
+  margin: 0 15px;
+  color: vars.$primary-color;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  
+  &:hover {
+    color: vars.$secondary-color;
+  }
+}
+
+.navigation--button--close {
+  background-color: vars.$primary-color;
+  border-radius: vars.$full-radius;
+  width: 4em;
+  height: 4em;
+  margin: 0.5em;
+  border: none;
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+  color: white;
+
+  &:hover {
+    transform: rotate(90deg);
+  }
+}
+
+.navigation--img--close {
+  width: 3em;
+  margin: 0.5em;
+  background-color: white;
+  border: none;
+  position: absolute;
+  top: 10em;
+  left: 2em;
+
+  &:hover {
+    transform: rotate(90deg);
+  }
+}

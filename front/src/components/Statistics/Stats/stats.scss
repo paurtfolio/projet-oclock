@@ -1,0 +1,196 @@
+@use 'src/styles/vars';
+
+.statistics {
+  text-align: center;
+}
+
+.statistic {
+  background-color: white;
+  border-radius: 2em;
+  box-shadow: vars.$box-shadow;
+  margin: 1em;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 1em; 
+  height: 18em;
+  height: 21em;
+  width: 36.5em;
+  @media (max-width: 1600px) {
+    width: 27em;
+    height: 18em;
+    z-index: 0;
+  }
+}
+
+.statistic__profile {
+  border-top: 2em solid vars.$profile-color;
+}
+.statistic__food {
+  border-top: 2em solid vars.$food-color;
+}
+.statistic__water {
+  border-top: 2em solid vars.$water-color;
+}
+.statistic__sport {
+  border-top: 2em solid vars.$sport-color;
+}
+.statistic__sleep {
+  border-top: 2em solid vars.$sleep-color;
+}
+.statistic__weight {
+  border-top: 2em solid vars.$weight-color;
+}
+
+.statistics__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+ 
+.stats {
+  width: 100vw;
+  margin-top: 65px;
+  padding: 0;
+
+  &__menu { //dashboard__menu
+    font-size: 1em;
+    width: 100%;
+    padding: 2em 4em 1em 1em;
+
+    &-list { //dashboard__menu-list
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &-item { //dashboard__menu-item
+      display: flex;
+      align-items: center;
+      height: 35px;
+      margin: 0;
+      padding: 1em;
+      transition: 0.5s ease all;
+      color: white;
+      border-radius: vars.$full-radius;
+      background-color: vars.$primary-color;
+
+      &:not(:last-of-type) { //dashboard__menu-item:not(:last-of-type)
+        margin-right: 1em;
+      }
+
+      &:hover { //dashboard__menu-item dashboard__menu-item:hover
+        cursor: pointer;
+        transition: 0.5s ease all;
+        color: white;
+        background-color: vars.$secondary-color;
+        border-radius: 3em;
+      }
+
+      &-active { //dashboard__menu-item dashboard__menu-item-active
+        color: white;;
+        border-radius: 3em;
+        background-color: vars.$secondary-color;
+      }
+    }
+  }
+}
+
+.statistics {
+  &__item {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    height: 19em;
+    position: relative;
+    border-radius: 2em;
+    box-shadow: vars.$box-shadow;
+
+    @media screen and (max-width: 900px) {
+      margin-bottom: 1em;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 2em;
+
+        @media screen and (max-width: 900px) {
+        margin-right: 0;
+        margin-bottom: 2em;
+      }
+    }
+  }
+
+  &__header {
+    width: 100%;
+    border-radius: 2em 2em 0 0;
+    z-index: 0;
+
+    &__food {border-top: 20px solid vars.$food-color;}
+    &__water {border-top: 20px solid vars.$water-color;}
+    &__sport {border-top: 20px solid vars.$sport-color;}
+    &__sleep {border-top: 20px solid vars.$sleep-color;}
+    &__weight {border-top: 20px solid vars.$weight-color;}
+    &__profile {border-top: 20px solid vars.$profile-color;}
+  }
+
+  &__rounded-img {
+    width: 3em;
+    box-shadow: 0 7px 29px 0 rgba(100,100,111,.2);
+    border-radius: 5em;
+    position: absolute;
+    right: 0.35em;
+    top: 0.35em;
+    z-index: 1;
+  
+      &-profile {
+      width: vars.$trackers-icons-width;
+      box-shadow: vars.$box-shadow;
+      border-radius: vars.$full-radius;
+      margin: 2em 0;
+      }
+  }
+
+  &__modal-img {
+    position: relative;
+    width: 2.5em;
+    left: 5em;
+    top: 1em;
+
+    @media screen and (max-width:900px) {
+      left: 11em;
+    }
+  }
+} 
+
+.statistic h2 {
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 1em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.user-details__tags--stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+
+  @media screen and (max-width:1500px) {
+    margin: auto;
+    width: 23em;
+  }
+}
+
+.user-details__tag--stats {
+  font-size: 1em;
+  margin: .3em;
+  padding: .35em .7em;
+  color: #fff;
+  border-radius: 0.5em;
+  background-color: #adacac;
+  margin-bottom: 0.5em;
+}

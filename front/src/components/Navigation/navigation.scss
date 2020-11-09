@@ -1,0 +1,73 @@
+@use 'src/styles/vars';
+
+.navigation {
+  &-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    width: 100%;
+  }
+
+  &-link {
+    margin: 0 15px;
+    color: vars.$primary-color;
+    font-size: 1.2em;
+
+    &--active {
+      color: vars.$secondary-color;
+    }
+
+    @media screen and (max-width:1020px) {
+      font-size: 1em;
+    }
+    @media screen and (min-width:1020px) and (max-width:1070px) {
+      font-size: 1em;
+    }
+    @media screen and (min-width:900px) and (max-width:990px) {
+      font-size: 0.89em;
+    }
+
+
+    &:hover {
+      color: vars.$secondary-color;
+    }
+
+
+  }
+
+  &-img {
+    margin-left:15px;
+    width: 180px;
+  }
+}
+
+
+@media (max-width:900px){ // mobile
+
+  .navigation--desktop {
+    display: none;
+  }
+
+  .navigation--mobile {
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+    border-top: 2px solid vars.$primary-color;
+    z-index: 2;
+
+    &-img {
+      width: 3em;
+      margin: 0.5em;
+
+      &-border {
+        border: 0.17em solid vars.$primary-color;
+        border-radius: 5em;
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@use 'src/styles/vars';
+
+.trackers {
+  display: flex;
+  height: auto;
+  margin-bottom: 2em;
+
+  @media screen and (max-width: 900px) {
+      flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 3.5em;
+    text-align: center;
+    background-color: white;
+    position: relative;
+    border-radius: 2em;
+    box-shadow: vars.$box-shadow;
+
+    @media screen and (max-width: 900px) {
+      margin-bottom: 1em;
+    }
+
+    & p { //trackers__item p
+        padding: 0 10px;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 2em;
+
+        @media screen and (max-width: 900px) {
+        margin-right: 0;
+        margin-bottom: 2em;
+      }
+    }
+  }
+
+  &__rounded-img {
+    width: vars.$trackers-icons-width;
+    box-shadow: vars.$box-shadow;
+    border-radius: vars.$full-radius;
+    margin-bottom: 1em;
+  }
+
+  &__modal-img {
+      position: relative;
+      width: 2vw;
+      left: 4.5vw;
+      top: 1.5vh;
+
+    @media screen and (max-width:900px) {
+      width: 6vw;
+      left: 37vw;
+      top: 3vh;
+    }
+  }
+} 
+
+.trackers__food {
+  border-top: 2em solid vars.$food-color;
+}
+.trackers__water {
+  border-top: 2em solid vars.$water-color;
+}
+.trackers__sport {
+  border-top: 2em solid vars.$sport-color;
+}
+.trackers__sleep {
+  border-top: 2em solid vars.$sleep-color;
+}
+.trackers__weight {
+  border-top: 2em solid vars.$weight-color;
+}
+
+.trackers-modal {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  margin: 0 auto;
+} 
